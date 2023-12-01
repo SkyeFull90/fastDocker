@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  backend:
+    image: fastbackend
+    container_name: fastbackend
+    ports:
+      - "8000:8000"
+    networks:
+      - frame
+
+  
+  frontend:
+   
+    image: fastfrontend
+    container_name: fastfrontend
+    networks:
+      - frame
+    ports:
+      - "5173:5173"
+networks:
+  frame:
